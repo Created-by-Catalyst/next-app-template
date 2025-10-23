@@ -1,0 +1,24 @@
+{
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.inlineSuggest.enabled": true,
+  "editor.tabCompletion": "on",
+
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.includeLanguages": {
+    "typescriptreact": "html",
+    "javascriptreact": "html"
+  },
+  "tailwindCSS.classAttributes": ["class", "className"],
+
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+
+  "search.exclude": {
+    "**/.next": true,
+    "**/node_modules": true
+  },
+  "tailwindCSS.experimental.configFile": "app/globals.css"
+}

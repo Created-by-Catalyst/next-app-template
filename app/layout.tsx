@@ -1,5 +1,15 @@
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
+import localFont from 'next/font/local'
+
+const mont = localFont({
+  src: [
+    { path: '../public/font/xxxxx.otf', weight: '200', style: 'normal' },
+  ],
+  display: 'swap',
+  preload: true,
+})
+
 
 // 移动端优化：Viewport 配置
 export const viewport: Viewport = {
@@ -43,7 +53,7 @@ export default function RootLayout({
         {/* 移动端优化：预连接 */}
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
       </head>
-      <body className="antialiased">
+      <body className={`${mont.className} antialiased text-[15px] sm:text-[16px]`}>
         {children}
       </body>
     </html>

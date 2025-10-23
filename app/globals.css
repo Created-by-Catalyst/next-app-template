@@ -1,6 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@source "./app/**/*.{js,ts,jsx,tsx,mdx}";
+@source "./pages/**/*.{js,ts,jsx,tsx,mdx}";
+@source "./components/**/*.{js,ts,jsx,tsx,mdx}";
 
 @layer base {
   /* 移动端优化：防止文本大小调整 */
@@ -34,30 +35,12 @@
   * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    padding: 0;
+    margin: 0;
   }
 }
 
-@layer utilities {
-  /* 移动端优化：触摸友好的按钮 */
-  .touch-target {
-    min-height: 44px;
-    min-width: 44px;
-  }
-
-  /* 移动端优化：禁用选择 */
-  .no-select {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-
-  /* 移动端优化：隐藏滚动条 */
-  .hide-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  .hide-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
+html,
+body {
+  background-color: #f6fbff;
 }

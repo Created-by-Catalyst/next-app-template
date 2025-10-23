@@ -1,7 +1,7 @@
 {
-  "name": "Next App",
-  "short_name": "nextapp",
-  "description": "Next.js application",
+  "name": "Soundcore Mobile App",
+  "short_name": "Soundcore",
+  "description": "Mobile-optimized Next.js application",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",
@@ -22,3 +22,4 @@
     }
   ]
 }
+

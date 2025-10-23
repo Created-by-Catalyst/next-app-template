@@ -1,33 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-
-interface ApiResponse {
-  message: string
-  timestamp: string
-}
-
 export default function Home() {
-  const [apiData, setApiData] = useState<ApiResponse | null>(null)
-  const [loading, setLoading] = useState(false)
-
-  const fetchData = async () => {
-    setLoading(true)
-    try {
-      const response = await fetch('/api/hello')
-      const data = await response.json()
-      setApiData(data)
-    } catch (error) {
-      console.error('Error fetching data:', error)
-    } finally {
-      setLoading(false)
-    }
-  }
-
-  useEffect(() => {
-    fetchData()
-  }, [])
-
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
       {/* 移动端优化：固定头部 */}
